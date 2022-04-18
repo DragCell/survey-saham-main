@@ -1,0 +1,256 @@
+.kotak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  margin: "2% 2% 2% 2%";
+  padding: "2.5% 2.5% 2.5% 2.5%";
+  background: darkgrey;
+  width: 60%;
+  border-radius: 25;
+}
+
+.container {
+  display: table;
+  width: 100%;
+}
+
+.top {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12vh;
+}
+
+.left {
+  /* background-color: #E8FFC2; */
+  background-color: #05467c;
+  position: absolute;
+  left: 0px;
+  width: 50%;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  margin-top: 2%;
+}
+
+.gmbr {
+  position: absolute;
+  z-index: 10;
+}
+
+.right {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 4;
+  right: 0px;
+  width: 50%;
+  margin-top: 2%;
+  height: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+}
+
+.rightContainer {
+  position: absolute;
+  z-index: 1;
+  background-color: #001f40;
+  height: 60vh;
+  width: 80%;
+  border-radius: 1.5%;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  background: transparent;
+  font-size: 65px;
+  font-weight: bold;
+  /* text-shadow: #000000, 2px; */
+  color: #001f40;
+  position: absolute;
+  z-index: 5;
+  height: 60vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(0px, -39%);
+  border-radius: 4% 4% 0% 0%;
+}
+
+.qTitle {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.jenisData {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.pointy {
+  cursor: pointer;
+}
+
+.input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+  padding: 3px;
+}
+
+.antara {
+  color: #fbb72a;
+  font-size: 20px;
+  transform: translate(0, 0%);
+  background: transparent;
+  position: absolute;
+  z-index: 10;
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate(10%, -60%);
+}
+
+.button {
+  position: relative;
+  z-index: 4;
+  background: #fbb72a;
+  padding: 8% 20%;
+  border-radius: 60px;
+  cursor: pointer;
+  color: #001f40;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .button:hover {
+  position: absolute;
+  z-index: 4;
+  background: #fbb72a;
+  padding: 1.4% 6.2%;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #001f40;
+  font-weight: bold;
+  transform: translate(194%, 400%);
+  transform: scale(1.1%, 1.1%);
+} */
+
+.topRightContainer {
+  position: absolute;
+  z-index: 2;
+  background-color: #fbb72a;
+  height: 48vh;
+  width: 80%;
+  border-radius: 1.5%;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(0%, -13%);
+}
+
+.penutup {
+  position: absolute;
+  z-index: 3;
+  background-color: #001f40;
+  height: 35vh;
+  width: 80%;
+  /* border-radius: 1.5%; */
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(0%, 2%);
+}
+
+.base {
+  height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  background: #05467c;
+}
+
+.logoUno {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate();
+}
+
+.bottom {
+  background-color: #fbb72a;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  transform: translate(0%, 1150%);
+  color: #ffd907;
+}
+
+.aok {
+  background: transparent;
+  height: 15%;
+  width: 28%;
+  transform: translate(0%, 275%);
+  /* background-color: #ffffff; */
+}
+
+@media screen and (max-width:800px) {
+
+
+  .title {
+    font-size: 20px;
+  }
+
+  .antara {
+    font-size: 10px;
+  }
+
+
+  .base {
+    display: flex;
+    flex-direction: column;
+  }
+}

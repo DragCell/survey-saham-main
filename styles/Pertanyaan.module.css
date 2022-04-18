@@ -1,0 +1,178 @@
+.gambar1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.gambar2 {
+    position: absolute;
+    z-index: 1;
+}
+
+.gambarKiri {
+    position: absolute;
+    height: 88vh;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 12vh;
+    /* align-items: left; */
+    float: left;
+    left: 0;
+    top: 0;
+}
+
+.gambarKanan {
+    position: absolute;
+    height: 88vh;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: right; */
+    margin-top: 12vh;
+    float: right;
+    right: 0;
+    top: 0;
+}
+
+.backgrounds {
+    height: 100vh;
+    width: 100%;
+    background: #05467c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* background: #E8FFC2; */
+    background: #05467c;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.card {
+    background-color: #001f40;
+    width: 60%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+
+.title {
+    border-radius: 25px 25px 0 0;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: #fbb72a;
+    padding: 10px 20px;
+    width: 100%;
+    color: #001f40;
+    text-align: center;
+}
+
+.jenisData {
+    display: flex;
+    flex-direction: column;
+    color: #fbb72a;
+    padding: 6% 20%;
+}
+
+.input {
+    font-size: large;
+    margin-bottom: 8px;
+}
+
+/* .penyesuaian {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.penyesuaiana {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+} */
+
+.buttons {
+    display: flex;
+    width: 40%;
+    align-self: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.button {
+    background: #fbb72a;
+    padding: 5px 30px;
+    border-radius: 60px;
+    cursor: pointer;
+    color: #001f40;
+    font-weight: bold;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.navBar {
+    background-color: #ffffff;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+}
+
+.bottom {
+    background-color: #fbb72a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 9vh;
+    color: #ffd907;
+}
+
+.gambar1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.gambar2 {
+    position: absolute;
+    z-index: 1;
+}
+
+@media screen and (max-width:800px) {
+    .card {
+        width: 80%;
+    }
+
+    .jenisData {
+        padding: 6% 8%;
+    }
+
+    .buttons {
+        width: 80%;
+    }
+
+    /* img#tes {
+        display: none;
+    } */
+}
