@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../styles/Thankyou.module.css'
 import useWindowSize from '../../hooks/useWindowSize';
 import Image from 'next/image'
+import { useEffect } from 'react';
 
 function Thankyou() {
     const { width, height } = useWindowSize();
@@ -10,6 +11,11 @@ function Thankyou() {
     React.useEffect(() => {
         if (typeof window !== undefined) {
             setDataDiri(JSON.parse(localStorage.getItem('dataDiri')))
+        }
+    }, [])
+    useEffect(() => {
+        if (JSON.parse(localStorage.getItem('login')) === null) {
+            router.push('/Login')
         }
     }, [])
 

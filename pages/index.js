@@ -57,6 +57,7 @@ function Index() {
 
         // data local storgage
         localStorage.setItem("dataDiri", JSON.stringify(dataDiri))
+        localStorage.setItem("login", true)
 
         // router lanjut
         router.push('/knowledge')
@@ -70,6 +71,7 @@ function Index() {
         fetch(`${HOST.internet}api/Responden/getUser.php`).then(res => res.json()).then(data => {
             let lowerUser = data.map(d => d.toLowerCase())
             if (lowerUser.includes(nama.toLocaleLowerCase())) {
+                localStorage.setItem("login", true)
                 localStorage.setItem("username", JSON.stringify(nama))
                 router.push('/library')
             } else {
@@ -147,7 +149,7 @@ function Index() {
                                 <div autoComplete='off' className={styles.input}>
                                     <div className={styles.jenisData}>
                                         <label htmlFor='nama'>Nama</label>
-                                        <input onChange={handleChange} className={styles.input} type='text' id="nama" placeholder='Masukkan nama lengkap' />
+                                        <input onChange={handleChange} className={styles.input} type='text' id="nama" placeholder='Masukkan nama anda' />
                                     </div>
                                     <div className={styles.jenisData}>
                                         <div>Gender</div>
@@ -178,7 +180,7 @@ function Index() {
                                     width: '100%',
                                     display: 'flex'
                                 }}>
-                                    Sudah punya akun?
+                                    Sudah pernah mengisi?
                                     <div onClick={() => setLogin(true)} className={styles.loginButton} style={{ color: 'cyan', marginLeft: 5, cursor: 'pointer' }}>Login disini</div>
                                 </div>
                             </form>

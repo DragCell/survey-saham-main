@@ -62,10 +62,12 @@ function Pertanyaan({ pertanyaan }) {
                 body: JSON.stringify({
                     idResponden: data.idResponden,
                     jawaban: [{ ...jawaban, [pertanyaan]: pilihan }]
+                    // .then(() => pilihan === "d" ? router.push('/thankyou') : router.push('/library'))
                 })
             }).then(() => {
                 localStorage.setItem("username", JSON.stringify(data.nama))
-                router.push('/library')
+                pilihan === "d" ? router.push("/thankyou") :
+                    router.push("/library")
             })
         })
 
