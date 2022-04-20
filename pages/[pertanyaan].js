@@ -9,11 +9,12 @@ import LoadingScreen from '../components/LoadingScreen';
 import Image from 'next/image'
 import useWindowSize from '../hooks/useWindowSize';
 
+
 function Pertanyaan({ pertanyaan }) {
     const router = useRouter()
     const pKeys = PERTANYAAN.map(p => p.key)
-    const { width, height } = useWindowSize();
     const ALPHABET = ['a', 'b', 'c', 'd']
+    const { width, height } = useWindowSize();
     const [pilihan, setPilihan] = useState("")
     const [loading, setLoading] = useState(false)
     const [jawaban, setJawaban] = useState({
@@ -62,7 +63,10 @@ function Pertanyaan({ pertanyaan }) {
                     idResponden: data.idResponden,
                     jawaban: [{ ...jawaban, [pertanyaan]: pilihan }]
                 })
-            }).then(() => pilihan === "d" ? router.push('/thankyou') : router.push('/library'))
+            }).then(() => {
+                localStorage.setItem("username", JSON.stringify(data.nama))
+                router.push('/library')
+            })
         })
 
         // DATA JAWABAN
@@ -89,12 +93,12 @@ function Pertanyaan({ pertanyaan }) {
                         </div>
                         <div className={styles.gambarKiri}>
                             <div className={styles.gambar1}>
-                                <Image src="/image/kiri.png" height={height / 100 * 79} width={width / 100 * 36} />
+                                <Image src="/image/daunKiri.svg" height={height / 100 * 79} width={width / 100 * 36} />
                             </div>
                         </div>
                         <div className={styles.gambarKanan}>
                             <div className={styles.gambar2}>
-                                <Image src="/image/kanan.png" height={height / 100 * 79} width={width / 100 * 36} />
+                                <Image src="/image/daunKanan.svg" height={height / 100 * 79} width={width / 100 * 36} />
                             </div>
                         </div>
                         <form className={styles.card}>

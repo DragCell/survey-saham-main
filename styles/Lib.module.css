@@ -31,11 +31,12 @@
     width: 100%;
     /* display: flex; */
     background: #05467c;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     overflow-y: scroll;
 }
 
 .bottom {
+    /* visibility: hidden; */
     background-color: #ffffff;
     position: absolute;
     z-index: 4;
@@ -380,6 +381,30 @@
 }
 
 @media screen and (max-width:800px) {
+    .tengah {
+        height: 60vh;
+    }
+
+    .bottom {
+        visibility: visible;
+        top: 40vh;
+    }
+
+    .isi {
+        position: absolute;
+        width: 500px;
+        margin-top: 12%;
+    }
+
+    .isiKiri {
+        transform: translateX(-150px);
+    }
+
+    .isiKanan {
+        transform: translateX(150px);
+
+    }
+
     .tengahAtas {
         font-size: 20px;
     }
@@ -388,4 +413,39 @@
         font-size: 15px;
     }
 
+    .gambarKiri {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-10px, 70px) scale(1.2, 1.2);
+    }
+
+    .gambarKanan {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0px, 280px) scale(1.8, 1.8);
+    }
+
+    .konten {
+        position: absolute;
+        top: 58vh;
+        background: white;
+        width: 100%;
+        padding: 15px;
+        padding-top: 5vh;
+        z-index: 999;
+    }
+
+    .vids {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px rgba(54, 53, 53, 0.353);
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: large;
+    }
 }

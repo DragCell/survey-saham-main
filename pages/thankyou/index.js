@@ -24,12 +24,12 @@ function Thankyou() {
             <div className={styles.gambarKiri}>
                 <div className={styles.gambar1}>
                     {/* <Image src="/image/pohonKiri.png" height={height / 100 * 79} width={width / 100 * 36} /> */}
-                    <Image src="/image/pohonKiri.png" height="500%" width="500%" />
+                    <Image src="/image/pohonKiri.svg" height={height / 100 * 79} width={width / 100 * 36} />
                 </div>
             </div>
             <div className={styles.gambarKanan}>
                 <div className={styles.gambar2}>
-                    <Image src="/image/pohonKanan.png" height={height / 100 * 79} width={width / 100 * 36} />
+                    <Image src="/image/pohonKanan.svg" height={height / 100 * 79} width={width / 100 * 36} />
                 </div>
             </div>
             <div className={styles.card}>
